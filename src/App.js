@@ -5,19 +5,16 @@ import './App.css'
 function App() {
     return (
         <div className="App">
-            <header className="App-header">
-                <img src={logo} className="App-logo" alt="logo" />
+            <header>So Wrong</header>
+            <main>
                 <p>
-                    Edit <code>src/App.js</code> and save to reload.
+                    Lorem ipsum dolor, sit amet consectetur adipisicing elit.
+                    Pariatur placeat, sint quisquam minima minus veritatis
+                    facilis suscipit dicta optio fugit quibusdam repellendus
+                    eveniet rerum odio, repudiandae, corrupti saepe officia
+                    delectus?
                 </p>
-                <a
-                    className="App-link"
-                    href="https://reactjs.org"
-                    target="_blank"
-                    rel="noopener noreferrer">
-                    Poo
-                </a>
-            </header>
+            </main>
         </div>
     )
 }
