@@ -6,4 +6,13 @@ header {
 }
 main {
     padding: 1em;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 2fr));
+    grid-gap: 1em;
+}
+
+.card {
+    border: 1px solid white;
+    padding: 1em;
+    border-radius: 15px;
 }

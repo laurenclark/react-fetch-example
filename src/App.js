@@ -1,22 +1,39 @@
-import React from 'react'
-import logo from './logo.svg'
-import './App.css'
+import React, { useState, useEffect } from 'react';
+import './App.css';
 
 function App() {
+    const [users, setUsers] = useState([]);
+    const [isLoading, setisLoading] = useState(true);
+
+    useEffect(() => {
+        fetch(`https://jsonplaceholder.typicode.com/users`, {
+            method: 'GET'
+        })
+            .then(res => res.json())
+            .then(response => {
+                setUsers(response);
+                setisLoading(false);
+            })
+            .catch(err => console.error(err));
+    }, [users]);
     return (
         <div className="App">
-            <header>So Wrong</header>
+            <header>Fetch Users</header>
             <main>
-                <p>
-                    Lorem ipsum dolor, sit amet consectetur adipisicing elit.
-                    Pariatur placeat, sint quisquam minima minus veritatis
-                    facilis suscipit dicta optio fugit quibusdam repellendus
-                    eveniet rerum odio, repudiandae, corrupti saepe officia
-                    delectus?
-                </p>
+                {isLoading && <p>Loading...</p>}
+                {users.map(user => (
+                    <div class="card" key={user.id}>
+                        <p>
+                            <b>Name:</b> {user.username}
+                        </p>
+                        <p>
+                            <b>Email:</b> {user.email}
+                        </p>
+                    </div>
+                ))}
             </main>
         </div>
-    )
+    );
 }
 
-export default App
+export default App;
