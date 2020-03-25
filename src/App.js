@@ -1,5 +1,4 @@
 import React, { useState, useEffect } from 'react';
-import './styles/main.css';
 
 function App() {
     const [users, setUsers] = useState([]);
@@ -9,7 +8,7 @@ function App() {
         fetch(`https://jsonplaceholder.typicode.com/users`, {
             method: 'GET'
         })
-            .then(res => res.json())
+            .then(response => response.json())
             .then(response => {
                 setUsers(response);
                 setisLoading(false);
@@ -22,7 +21,7 @@ function App() {
             <main>
                 {isLoading && <p>Loading...</p>}
                 {users.map(user => (
-                    <div class="card" key={user.id}>
+                    <div className="card" key={user.id}>
                         <p>
                             <b>Name:</b> {user.username}
                         </p>
