@@ -14,7 +14,7 @@ function App() {
                 setisLoading(false);
             })
             .catch(err => console.error(err));
-    }, [users]);
+    }, []);
     return (
         <div className="App">
             <header>Fetch Users</header>
