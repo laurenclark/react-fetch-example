@@ -18,18 +18,20 @@ function App() {
     return (
         <div className="App">
             <header>Fetch Users</header>
-            <main>
+            <main className="container">
                 {isLoading && <p>Loading...</p>}
-                {users.map(user => (
-                    <Card
-                        key={user.id}
-                        username={user.name || 'n/a'}
-                        email={user.email || 'n/a'}
-                        phone={user.phone || 'n/a'}
-                        company={user.company.name || 'n/a'}
-                        catchPhrase={user.company.catchPhrase || 'n/a'}
-                    />
-                ))}
+                {users
+                    ? users.map(user => (
+                          <Card
+                              key={user.id}
+                              username={user.name || 'n/a'}
+                              email={user.email || 'n/a'}
+                              phone={user.phone || 'n/a'}
+                              company={user.company.name || 'n/a'}
+                              catchPhrase={user.company.catchPhrase || 'n/a'}
+                          />
+                      ))
+                    : 'No Results.'}
             </main>
         </div>
     );

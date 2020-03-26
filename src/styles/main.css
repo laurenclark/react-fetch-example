@@ -22,6 +22,8 @@ header {
 }
 main {
     padding: 1em;
+    max-width: 1400px;
+    margin: 0 auto;
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(300px, 2fr));
     grid-gap: 1em;
@@ -31,4 +33,11 @@ main {
     border: 1px solid white;
     padding: 1em;
     border-radius: 15px;
+    hr {
+        border: 1px solid white;
+    }
+    cite {
+        display: inline;
+        text-align: right;
+    }
 }

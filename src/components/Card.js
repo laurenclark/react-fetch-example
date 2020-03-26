@@ -13,8 +13,8 @@ export default function Card(props) {
             <p>
                 <b>Phone:</b> {props.phone}
             </p>
-            <cite>{props.company}</cite>
             <blockquote>"{props.catchPhrase}"</blockquote>
+            <cite>{props.company}</cite>
         </div>
     );
 }
