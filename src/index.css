@@ -20,6 +20,30 @@ header {
     font-size: 140%;
     font-weight: bold;
 }
+
+header a {
+        color: dodgerblue;
+        font-weight: 200;
+    }
+
+header a:hover {
+            color: #1b7ad6;
+            transition: color 0.3s ease-out;
+        }
+
+header span {
+        float: right;
+    }
+
+header span:first-of-type {
+        float: left;
+    }
+
+header::after {
+        display: table;
+        content: ' ';
+        clear: both;
+    }
 main {
     padding: 1em;
     max-width: 1400px;

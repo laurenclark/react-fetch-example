@@ -19,6 +19,25 @@ header {
     padding: 1em;
     font-size: 140%;
     font-weight: bold;
+    a {
+        color: dodgerblue;
+        font-weight: 200;
+        &:hover {
+            color: #1b7ad6;
+            transition: color 0.3s ease-out;
+        }
+    }
+    span {
+        float: right;
+    }
+    span:first-of-type {
+        float: left;
+    }
+    &::after {
+        display: table;
+        content: ' ';
+        clear: both;
+    }
 }
 main {
     padding: 1em;

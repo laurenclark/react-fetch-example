@@ -1,4 +1,23 @@
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+
+## React & Fetch API Demo
+Uses:
+- PostCSS
+- CSS Grid
+- Jest Unit Tests
+- create-react-app
+- Fetch API 
+- React Hooks 
+- Asynchronous HTTP Requests
+- ES6 
+- JSX
+- Netlify CLI
+- Node
+- Yarn
+
+View Demo -> [https://eager-minsky-fce350.netlify.com](https://eager-minsky-fce350.netlify.com)
+
+--------------
+
 
 ## Available Scripts
 
@@ -63,6 +82,6 @@ This section has moved here: https://facebook.github.io/create-react-app/docs/ad
 
 This section has moved here: https://facebook.github.io/create-react-app/docs/deployment
 
-### `yarn build` fails to minify
+``### `yarn build` fails to minify
 
 This section has moved here: https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify

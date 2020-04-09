@@ -4,7 +4,14 @@ import FetchUsers from './components/fetch-users';
 function App() {
     return (
         <div className="App">
-            <header>Fetch Users</header>
+            <header>
+                <span>Fetch Users</span>
+                <span>
+                    <a href="https://github.comhttps://github.com/laurenclark/react-fetch-example">
+                        View on GitHub
+                    </a>
+                </span>
+            </header>
             <main className="container">
                 <FetchUsers />
             </main>
