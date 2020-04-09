@@ -3,23 +3,28 @@ import Card from './card';
 
 function FetchUsers() {
     const [users, setUsers] = useState([]);
-    const [isLoading, setisLoading] = useState(true);
+    const [isLoading, setIsLoading] = useState(true);
+    const [isError, setIsError] = useState(false);
     const url = `https://jsonplaceholder.typicode.com/users`;
 
     useEffect(() => {
         fetch(url, {
             method: 'GET'
         })
-            .then((response) => response.json())
-            .then((response) => {
-                setUsers(response);
-                setisLoading(false);
+            .then((data) => data.json())
+            .then((data) => {
+                setUsers(data);
             })
-            .catch((err) => console.error(err));
+            .catch((err) => {
+                setIsError(true);
+                console.error(err);
+            })
+            .finally(setIsLoading(false));
     }, [url]);
     return (
         <Fragment>
             {isLoading && <p>Loading...</p>}
+            {isError && <div>Something went wrong...</div>}
             {users
                 ? users.map((user) => (
                       <Card
