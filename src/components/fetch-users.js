@@ -22,12 +22,14 @@ function FetchUsers() {
     // }, [url]);
 
     useEffect(() => {
+        // Cancel on cleanup
         let didCancel = false;
         const url = `https://jsonplaceholder.typicode.com/users`;
         const config = { method: 'GET' };
         const fetchData = async () => {
             if (!didCancel) {
                 try {
+                    // Await the first and then the second
                     const response = await fetch(url, config);
                     const json = await response.json();
                     setUsers(json);
