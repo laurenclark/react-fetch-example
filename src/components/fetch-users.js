@@ -1,5 +1,5 @@
 import React, { useState, useEffect, Fragment } from 'react';
-import Card from './card';
+import Card from './user-card';
 
 function FetchUsers() {
     const [users, setUsers] = useState([]);
