@@ -7,7 +7,7 @@ function App() {
             <header>
                 <span>Fetch Users</span>
                 <span>
-                    <a href="https//github.com/laurenclark/react-fetch-example">
+                    <a href="https://github.com/laurenclark/react-fetch-example">
                         View on GitHub
                     </a>
                 </span>
