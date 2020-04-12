@@ -6,6 +6,8 @@ function FetchUsers() {
     const [isLoading, setIsLoading] = useState(true);
     const [isError, setIsError] = useState(false);
 
+    // If you want to do a regular promise based fetch
+
     // useEffect(() => {
     //     fetch(url, {
     //         method: 'GET'
@@ -22,7 +24,6 @@ function FetchUsers() {
     // }, [url]);
 
     useEffect(() => {
-        // Cancel on cleanup
         let didCancel = false;
         const url = `https://jsonplaceholder.typicode.com/users`;
         const config = { method: 'GET' };
@@ -42,6 +43,7 @@ function FetchUsers() {
         };
         fetchData();
         return () => {
+            // If the fetch request is slow, and the component has already unmounted when the async request finishes there will be an error. Also if the user clicks another {id} if the fetch is to an id based resrouce, the wrong data could be displayed!
             didCancel = true;
         };
     }, []);
