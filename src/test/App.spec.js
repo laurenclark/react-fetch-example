@@ -15,7 +15,7 @@ test('displays anchor text', () => {
 });
 
 test('link should go to github', () => {
-    const { getBytext } = render(<App />);
+    render(<App />);
     expect(document.querySelector('header a').getAttribute('href')).toBe(
         'https://github.com/laurenclark/react-fetch-example'
     );
