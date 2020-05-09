@@ -1,5 +1,6 @@
 import React, { useState, useEffect, Fragment } from 'react';
 import Card from './user-card';
+import LoadingSpinner from './loading-spinner';
 
 function FetchUsers() {
     const [users, setUsers] = useState([]);
@@ -50,7 +51,7 @@ function FetchUsers() {
 
     return (
         <Fragment>
-            {isLoading && <p>Loading...</p>}
+            {isLoading && <LoadingSpinner />}
             {isError && <div>Something went wrong...</div>}
             {users &&
                 users.map((user) => (
