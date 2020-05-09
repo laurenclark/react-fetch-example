@@ -45,7 +45,10 @@ function FetchUsers() {
         };
         fetchData();
         return () => {
-            // If the fetch request is slow, and the component has already unmounted when the async request finishes there will be an error. Also if the user clicks another {id} if the fetch is to an id based resrouce, the wrong data could be displayed!
+            // If the fetch request is slow, and the component has already
+            // unmounted when the async request finishes there will be an error.
+            // Also if the user clicks another { id } if the fetch is to an id based
+            // resource, the wrong data could be displayed!
             didCancel = true;
         };
     }, [url]);
