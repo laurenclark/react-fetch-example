@@ -6,7 +6,8 @@ function FetchUsers() {
     const [users, setUsers] = useState([]);
     const [isLoading, setIsLoading] = useState(true);
     const [isError, setIsError] = useState(false);
-
+    const url = `https://jsonplaceholder.typicode.com/users`;
+    const config = { method: 'GET' };
     // If you want to do a regular promise based fetch
 
     // useEffect(() => {
@@ -22,12 +23,11 @@ function FetchUsers() {
     //             console.error(err);
     //         })
     //         .finally(setIsLoading(false));
+    // Pass in URL for useEffect to use.
     // }, [url]);
 
     useEffect(() => {
         let didCancel = false;
-        const url = `https://jsonplaceholder.typicode.com/users`;
-        const config = { method: 'GET' };
         const fetchData = async () => {
             if (!didCancel) {
                 try {
@@ -47,7 +47,7 @@ function FetchUsers() {
             // If the fetch request is slow, and the component has already unmounted when the async request finishes there will be an error. Also if the user clicks another {id} if the fetch is to an id based resrouce, the wrong data could be displayed!
             didCancel = true;
         };
-    }, []);
+    }, [url]);
 
     return (
         <Fragment>
