@@ -5,14 +5,16 @@ function App() {
     return (
         <div className="App">
             <header>
-                <span>Fetch Users</span>
+                <h1>Fetch Users</h1>
                 <span>
-                    <a href="https://github.com/laurenclark/react-fetch-example">
+                    <a
+                        title="Visit the github repository for this project"
+                        href="https://github.com/laurenclark/react-fetch-example">
                         View on GitHub
                     </a>
                 </span>
             </header>
-            <main className="container">
+            <main role="main" className="container">
                 <FetchUsers />
             </main>
         </div>

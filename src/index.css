@@ -36,8 +36,10 @@ header span {
         float: right;
     }
 
-header span:first-of-type {
+header h1 {
         float: left;
+        font-size: 28px;
+        margin: 0;
     }
 
 header::after {

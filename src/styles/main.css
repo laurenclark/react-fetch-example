@@ -31,8 +31,10 @@ header {
     span {
         float: right;
     }
-    span:first-of-type {
+    h1 {
         float: left;
+        font-size: 28px;
+        margin: 0;
     }
     &::after {
         display: table;
