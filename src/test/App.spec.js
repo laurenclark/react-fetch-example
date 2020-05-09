@@ -7,3 +7,16 @@ test('renders the title', () => {
     const titleElement = getByText(/Fetch Users/i);
     expect(titleElement).toBeInTheDocument();
 });
+
+test('displays anchor text', () => {
+    const { getByText } = render(<App />);
+    const titleElement = getByText(/View on Github/i);
+    expect(titleElement).toBeInTheDocument();
+});
+
+test('link should go to github', () => {
+    const { getBytext } = render(<App />);
+    expect(document.querySelector('header a').getAttribute('href')).toBe(
+        'https://github.com/laurenclark/react-fetch-example'
+    );
+});
