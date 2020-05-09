@@ -1,5 +1,6 @@
+import React from 'react';
 import { render } from '@testing-library/react';
-import Card from '../components/card.js';
+import Card from '../components/user-card';
 
 test('it displays the name field', () => {
     const { getByText } = render(<Card />);
