@@ -9,7 +9,7 @@ Uses:
 -   Jest Unit Tests
 -   create-react-app
 -   Fetch API
--   React Hooks
+-   React Hooks (useState, useEffect)
 -   Asynchronous HTTP Requests
 -   ES6
 -   JSX
