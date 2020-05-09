@@ -1,3 +1,14 @@
+:root {
+    --background-primary: #f3f4f5;
+    --foreground-primary: #111111;
+    --background-secondary: #333333;
+    --foreground-secondary: #ffffff;
+    --anchor: #c3e1ff;
+    --anchor-change: #5ca6f0;
+    --accent: grey;
+    --shade: #d3d3d3;
+}
+
 body {
     margin: 0;
     font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto',
@@ -5,7 +16,7 @@ body {
         'Helvetica Neue', sans-serif;
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
-    background: #f3f4f5;
+    background: var(--background-primary);
 }
 
 code {
@@ -14,17 +25,17 @@ code {
 }
 
 header {
-    background: #333333;
+    background: var(--background-secondary);
     color: white;
-    border-bottom: 4px solid grey;
+    border-bottom: 4px solid var(--accent);
     padding: 1em;
     font-size: 140%;
     font-weight: bold;
     a {
-        color: dodgerblue;
+        color: var(--anchor);
         font-weight: 200;
         &:hover {
-            color: #1b7ad6;
+            color: var(--anchor-change);
             transition: color 0.3s ease-out;
         }
     }
@@ -54,14 +65,14 @@ main {
 .card {
     padding: 0.3em 1em 1em 1em;
     border-radius: 10px;
-    background: #ffffff;
-    box-shadow: 2px 2px 8px 0 #d3d3d3;
+    background: var(--foreground-secondary);
+    box-shadow: 2px 2px 8px 0 var(--shade);
     hr {
-        border: 2px solid lightgrey;
+        border: 2px solid var(--accent);
     }
     blockquote {
         font-style: italic;
-        color: grey;
+        color: var(--accent);
     }
     cite {
         display: block;
@@ -74,7 +85,7 @@ main {
     &:hover {
         transition: all 0.4s ease;
         transform: translateY(-10px);
-        box-shadow: 4px 8px 12px 0 #d3d3d3;
+        box-shadow: 4px 8px 12px 0 var(--shade);
     }
 }
 
@@ -94,7 +105,7 @@ main {
         height: 144px;
         div {
             position: absolute;
-            border: 4px solid grey;
+            border: 4px solid var(--accent);
             opacity: 1;
             border-radius: 50%;
             animation: ripple 1.3s cubic-bezier(0, 0.2, 0.8, 1) infinite;
