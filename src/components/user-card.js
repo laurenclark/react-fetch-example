@@ -2,7 +2,7 @@ import React from 'react';
 
 export default function Card(props) {
     return (
-        <div className="card">
+        <section className="card">
             <p>
                 <b>Name:</b> {props.username.replace(/[._]/g, ' ')}
             </p>
@@ -15,6 +15,6 @@ export default function Card(props) {
             </p>
             <blockquote>"{props.catchPhrase}"</blockquote>
             <cite>{props.company}</cite>
-        </div>
+        </section>
     );
 }
