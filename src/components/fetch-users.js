@@ -8,6 +8,7 @@ function FetchUsers() {
     const [isError, setIsError] = useState(false);
     const url = `https://jsonplaceholder.typicode.com/users`;
     const config = { method: 'GET' };
+
     // If you want to do a regular promise based fetch
 
     // useEffect(() => {
@@ -51,7 +52,7 @@ function FetchUsers() {
 
     return (
         <Fragment>
-            {isLoading && <LoadingSpinner />}
+            {isLoading && <LoadingSpinner text="Fetching Users..." />}
             {isError && <div>Something went wrong...</div>}
             {users &&
                 users.map((user) => (
