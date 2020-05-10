@@ -66,7 +66,6 @@ function FetchUsers() {
                         phone={user.phone || 'n/a'}
                         company={user.company.name || 'n/a'}
                         catchPhrase={user.company.catchPhrase || 'n/a'}
-                        test={user.poo || 'n/a'}
                     />
                 ))}
         </Fragment>
