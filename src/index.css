@@ -5,7 +5,7 @@
     --foreground-secondary: #ffffff;
     --anchor: #c3e1ff;
     --anchor-change: #5ca6f0;
-    --accent: grey;
+    --accent: #3a3a3a;
     --shade: #d3d3d3;
 }
 
@@ -34,30 +34,30 @@ header {
 }
 
 header a {
-        color: var(--anchor);
-        font-weight: 200;
-    }
+    color: var(--anchor);
+    font-weight: 200;
+}
 
 header a:hover {
-            color: var(--anchor-change);
-            transition: color 0.3s ease-out;
-        }
+    color: var(--anchor-change);
+    transition: color 0.3s ease-out;
+}
 
 header span {
-        float: right;
-    }
+    float: right;
+}
 
 header h1 {
-        float: left;
-        font-size: 28px;
-        margin: 0;
-    }
+    float: left;
+    font-size: 28px;
+    margin: 0;
+}
 
 header::after {
-        display: table;
-        content: ' ';
-        clear: both;
-    }
+    display: table;
+    content: ' ';
+    clear: both;
+}
 main {
     max-width: 1400px;
     margin: 0 auto;
@@ -75,29 +75,29 @@ main {
 }
 
 .card hr {
-        border: 2px solid var(--accent);
-    }
+    border: 2px solid var(--accent);
+}
 
 .card blockquote {
-        font-style: italic;
-        color: var(--accent);
-    }
+    font-style: italic;
+    color: var(--accent);
+}
 
 .card cite {
-        display: block;
-        text-align: right;
-    }
+    display: block;
+    text-align: right;
+}
 
 .card cite::before {
-            content: '– ';
-            position: relative;
-        }
+    content: '– ';
+    position: relative;
+}
 
 .card:hover {
-        transition: all 0.4s ease;
-        transform: translateY(-10px);
-        box-shadow: 4px 8px 12px 0 var(--shade);
-    }
+    transition: all 0.4s ease;
+    transform: translateY(-10px);
+    box-shadow: 4px 8px 12px 0 var(--shade);
+}
 
 .loading {
     display: grid;
@@ -111,23 +111,23 @@ main {
 }
 
 .loading__ripple {
-        display: block;
-        position: relative;
-        width: 144px;
-        height: 144px;
-    }
+    display: block;
+    position: relative;
+    width: 144px;
+    height: 144px;
+}
 
 .loading__ripple div {
-            position: absolute;
-            border: 4px solid var(--accent);
-            opacity: 1;
-            border-radius: 50%;
-            animation: ripple 1.3s cubic-bezier(0, 0.2, 0.8, 1) infinite;
-        }
+    position: absolute;
+    border: 4px solid var(--accent);
+    opacity: 1;
+    border-radius: 50%;
+    animation: ripple 1.3s cubic-bezier(0, 0.2, 0.8, 1) infinite;
+}
 
 .loading__ripple div:nth-child(2) {
-            animation-delay: -0.5s;
-        }
+    animation-delay: -0.5s;
+}
 @keyframes ripple {
     0% {
         top: 74px;
