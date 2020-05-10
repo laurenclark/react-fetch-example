@@ -1,20 +1,21 @@
 import React from 'react';
 
-export default function Card(props) {
+export default function Card({ username, email, phone, catchPhrase, company }) {
+    const formatName = username.replace(/[._]/g, ' ');
     return (
         <section className="card">
             <p>
-                <b>Name:</b> {props.username.replace(/[._]/g, ' ')}
+                <b>Name:</b> {formatName}
             </p>
             <hr />
             <p>
-                <b>Email:</b> {props.email}
+                <b>Email:</b> {email}
             </p>
             <p>
-                <b>Phone:</b> {props.phone}
+                <b>Phone:</b> {phone}
             </p>
-            <blockquote>"{props.catchPhrase}"</blockquote>
-            <cite>{props.company}</cite>
+            <blockquote>"{catchPhrase}"</blockquote>
+            <cite>{company}</cite>
         </section>
     );
 }
