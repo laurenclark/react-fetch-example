@@ -1,4 +1,4 @@
-import React, { useState, useEffect, Fragment } from 'react';
+import React, { useState, useEffect, memo } from 'react';
 import Card from './user-card';
 import LoadingSpinner from './loading-spinner';
 
@@ -54,22 +54,30 @@ function FetchUsers() {
     }, []);
 
     return (
-        <Fragment>
+        <>
             {isLoading && <LoadingSpinner text="Fetching Users..." />}
             {isError && <div>Something went wrong...</div>}
             {users &&
                 users.map((user) => (
                     <Card
                         key={user.id}
-                        username={user.name || 'n/a'}
-                        email={user.email || 'n/a'}
-                        phone={user.phone || 'n/a'}
-                        company={user.company.name || 'n/a'}
-                        catchPhrase={user.company.catchPhrase || 'n/a'}
+                        username={user.name}
+                        email={user.email}
+                        phone={user.phone}
+                        company={user.company.name}
+                        catchPhrase={user.company.catchPhrase}
                     />
                 ))}
-        </Fragment>
+        </>
     );
 }
 
-export default FetchUsers;
+FetchUsers.defaultProps = {
+    username: 'n/a',
+    email: 'n/a',
+    phone: 'n/a',
+    company: 'n/a',
+    catchPhrase: 'n/a'
+};
+
+export default memo(FetchUsers);
