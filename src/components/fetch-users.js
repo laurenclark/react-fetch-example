@@ -72,12 +72,4 @@ function FetchUsers() {
     );
 }
 
-FetchUsers.defaultProps = {
-    username: 'n/a',
-    email: 'n/a',
-    phone: 'n/a',
-    company: 'n/a',
-    catchPhrase: 'n/a'
-};
-
 export default memo(FetchUsers);

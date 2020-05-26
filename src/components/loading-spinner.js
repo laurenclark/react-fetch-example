@@ -12,4 +12,8 @@ function LoadingSpinner({ text }) {
     );
 }
 
+LoadingSpinner.defaultProps = {
+    text: 'Loading...'
+};
+
 export default memo(LoadingSpinner);
