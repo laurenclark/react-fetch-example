@@ -1,6 +1,6 @@
-import React from 'react';
+import React, { memo } from 'react';
 
-export default function Card({ username, email, phone, catchPhrase, company }) {
+function Card({ username, email, phone, catchPhrase, company }) {
     const formatName = username.replace(/[._]/g, ' ');
     return (
         <section className="card">
@@ -19,3 +19,5 @@ export default function Card({ username, email, phone, catchPhrase, company }) {
         </section>
     );
 }
+
+export default memo(Card);
