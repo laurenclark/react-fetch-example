@@ -51,7 +51,7 @@ function FetchUsers() {
             // resource, the wrong data could be displayed!
             didCancel = true;
         };
-    }, [url, config]);
+    }, []);
 
     return (
         <Fragment>
