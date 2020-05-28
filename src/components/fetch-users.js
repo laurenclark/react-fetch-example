@@ -7,7 +7,13 @@ function FetchUsers() {
     const [isLoading, setIsLoading] = useState(true);
     const [isError, setIsError] = useState(false);
     const url = `https://jsonplaceholder.typicode.com/users`;
-    const config = { method: 'GET' };
+    const config = {
+        method: 'GET',
+        mode: 'cors',
+        headers: {
+            'Content-Type': 'application/json'
+        }
+    };
 
     // If you want to do a regular promise based fetch
 
