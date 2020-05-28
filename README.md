@@ -18,7 +18,7 @@ Uses:
 -   Yarn
 
 View Demo ->
-[https://keen-ramanujan-1ee946.netlify.com/](https://react-hooks-fetch.netlify.app)
+[https://react-hooks-fetch.netlify.app](https://react-hooks-fetch.netlify.app)
 
 ---
 
